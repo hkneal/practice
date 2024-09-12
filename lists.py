@@ -1,3 +1,5 @@
+import time
+
 my_list = [2,1,5,3,4]
 
 def minimumBribes(q):
@@ -54,3 +56,22 @@ print(d2)
 
 d1["n"]=22
 print(d2)
+
+def arr_find():
+    my_list = ['ab', 'sd', 'ef', 'de']
+    for i in range(0,int(len(my_list)/2)+1,2):
+        j = i +1
+        print("I: {}, J: {}".format(i, j))
+        if my_list[i] == 'ef' or my_list[j] == 'ef':
+            print("Found")
+
+    # for i in range(0,len(my_list)):
+    #     if my_list[i] == 'ef':
+    #         print("Found")
+
+t1 = time.perf_counter(), time.process_time()
+arr_find()
+t2 = time.perf_counter(), time.process_time()
+
+print(f"Real time: {t2[0] - t1[0]}")
+print(f"CPU time: {t2[1] - t1[1]}")
