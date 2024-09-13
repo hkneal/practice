@@ -59,15 +59,19 @@ print(d2)
 
 def arr_find():
     my_list = ['ab', 'sd', 'ef', 'de']
-    for i in range(0,int(len(my_list)/2)+1,2):
-        j = i +1
-        print("I: {}, J: {}".format(i, j))
-        if my_list[i] == 'ef' or my_list[j] == 'ef':
+    # for i in range(0,int(len(my_list)/2)+1,2):
+    #     j = i +1
+    #     print("I: {}, J: {}".format(i, j))
+    #     if my_list[i] == 'ef' or my_list[j] == 'ef':
+    #         print("Found")
+
+    for i in range(0,len(my_list)):
+        if my_list[i] == 'ef':
             print("Found")
 
-    # for i in range(0,len(my_list)):
-    #     if my_list[i] == 'ef':
-    #         print("Found")
+    # Does not improve performance
+    # The though was it would run in O(n/2) and be quicker,
+    # The added complexity added cycles.
 
 t1 = time.perf_counter(), time.process_time()
 arr_find()
