@@ -68,7 +68,6 @@ def minion_game(string: str) -> tuple:
     stuart_count = (get_count_stuart(string))
     kevin_count = (get_count_kevin(string))
     print(kevin_count)
-
     return ("Stuart " + str(stuart_count)) if stuart_count > kevin_count else "Draw" if stuart_count == kevin_count else ("Kevin " + str(kevin_count))
 
 print(minion_game("BANANA"))
