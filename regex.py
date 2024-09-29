@@ -16,3 +16,11 @@ for _ in range(x):
     except Exception:
         print("False")
 
+
+# pattern = r'^[a-zA-Z0-9_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,3}$'
+"""
+emailValidator = re.compile("^[a-zA-Z0-9_-]+@[a-zA-Z0-9]+.[a-zA-Z]{1,3}$")
+
+def fun(s): return emailValidator.match(s)
+"""
+
