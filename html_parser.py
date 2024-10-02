@@ -35,3 +35,4 @@ class my_HTLM_Parser(HTMLParser):
 
 parser = my_HTLM_Parser()
 parser.feed(s)
+parser.close()
