@@ -4,11 +4,15 @@ import random
 import re
 import sys
 
-matrix = ["T%Mic&", "h%axr%", "iit#p!", "ssrst&"]
+matrix = ['Tsi', 'h%x', 'i #', 'sM ', '$a ', '#t%', 'ir!']
 
-matrix = zip(*matrix)  # Flatten the matrix
-matrix = "".join(["".join(x) for x in matrix])
-print(matrix)
+def join_tuple_string(tups: tuple) -> str:
+    return "".join(tups)
+
+
+matrix = "".join(map(lambda *x: "".join(x), *matrix))
+# matrix = zip(*matrix)  # Flatten the matrix
+# matrix = "".join(map(join_tuple_string, matrix))
 matrix = re.sub(r"([\w]\s?)[!@#$%&]+(\s?[\w])", r"\1 \2", matrix)
 print(matrix)
 
