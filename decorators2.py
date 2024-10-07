@@ -15,3 +15,6 @@ def name_format(person):
 if __name__ == '__main__':
     people = [input().split() for i in range(int(input()))]
     print(*name_format(people), sep='\n')
+
+
+"['+91 '+num[-10:-5]+' '+num[-5:] for num in l]"
