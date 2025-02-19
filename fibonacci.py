@@ -10,7 +10,7 @@ def fib(n: int) -> int:
 
 num = 42
 timestamp = datetime.now()
-fib(num)
+print(fib(num))
 time_spent = datetime.now() - timestamp
 print(f"Ran fib {num}")
 print(f"{time_spent.seconds} seconds, {time_spent.microseconds} microseconds")
@@ -26,9 +26,9 @@ def build_fibs(n:int) ->int:
         fibs.append(fibs[-1] + fibs[-2])
     return fibs[n]
 
-num = 1000
+num = 42
 timestamp = datetime.now()
-build_fibs(num)
+print(build_fibs(num))
 time_spent = datetime.now() - timestamp
 print(f"Ran fib {num}")
 print(f"{time_spent.seconds} seconds, {time_spent.microseconds} microseconds")
