@@ -18,3 +18,18 @@ print(prodct)
 
 lst = [''.join(l) for i in range(len(x),0,-1) for l in combinations(x, i)]
 # print(lst)
+
+### Get the longest
+"""
+    for i in range(len(s) -1):
+        for j in range(i+1, len(s)):
+            if s[i:j+1] == s[i:j+1][::-1]:
+                if len(s[i:j+1]) > longest:
+                    longest = len(s[i:j+1])
+                    lngst_word = s[i:j+1]
+
+"""
+
+age = 20
+if not age < 18:
+    print("You are an adult") # Output: You are an adult
