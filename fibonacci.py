@@ -63,7 +63,6 @@ print("\n")
 
 
 # Dynamic top down programming using caching
-
 @lru_cache(maxsize=None)
 def cached_fib(n: int) -> int:
     if n <= 2:
@@ -75,4 +74,21 @@ timestamp = datetime.now()
 print(cached_fib(num))
 time_spent = datetime.now() - timestamp
 print(f"Ran cached_fib {num}")
+print(f"{time_spent.seconds} seconds, {time_spent.microseconds} microseconds")
+
+# Dynamic Bottom Up approach
+def bottom_up_fib(n: int) -> int:
+    current = 1
+    previous = 1
+    for _ in range(n-2):
+        next = current + previous
+        previous, current = current, next
+    return current
+
+
+num = 42
+timestamp = datetime.now()
+print(bottom_up_fib(num))
+time_spent = datetime.now() - timestamp
+print(f"Ran bottom_up_fib {num}")
 print(f"{time_spent.seconds} seconds, {time_spent.microseconds} microseconds")
