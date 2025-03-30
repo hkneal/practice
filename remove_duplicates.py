@@ -26,7 +26,22 @@ class Solution:
                 i += 1
         return i
 
+    # i = 0
+
+    #     for ind, val in enumerate(nums):
+    #         if ind == 0:
+    #             nums[i] = val
+    #             i += 1
+
+    #         elif nums[ind-1] != val:
+    #             nums[i] = val
+    #             i += 1
+    #     return i
+
 
 
 nums = [0,0,1,1,1,1,2,3,3]
 print(Solution().removeDuplicates(nums))
+
+# Quickest for small lists
+print(list(dict.fromkeys(nums)))
