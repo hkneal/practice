@@ -21,6 +21,7 @@ representation 100000 and has no binary gaps.
 def longest_gap(num: int) -> int:
     """ Returns the longest binary gap """
 
+    print(bin(num)[2:])
     binary_value = f'{abs(num):08b}'
     print(binary_value)
 
@@ -51,5 +52,5 @@ def longest_gap(num: int) -> int:
 
 
 
-test_num = 9
+test_num = 529
 print(longest_gap(test_num))
