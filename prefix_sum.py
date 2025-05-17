@@ -22,3 +22,4 @@ def find_sum_inplace(i: int, j: int) -> int:
 
 print(find_sum_at_indicies(1,5))
 print(find_sum_inplace(1,5))
+
