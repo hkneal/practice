@@ -41,15 +41,34 @@ class BinaryTree():
 
 
     def print_bst_inorder(self, node: Node):
-        # Recusivly Print the BST DFS Inorder
-
+        # Recusivly Print the BST DFS Inorder left -> root -> right
         if node:
             self.print_bst_inorder(node.left)
-            print(node)
+            print(node, end="->")
             self.print_bst_inorder(node.right)
 
         else:
-            # print(node)
+            return
+
+
+
+    def print_bst_preorder(self, node: Node):
+        # Recursivly print the BST Preorder root -> left -> right
+        if node:
+            print(node, end="->")
+            self.print_bst_preorder(node.left)
+            self.print_bst_preorder(node.right)
+        else:
+            return
+
+    def print_bst_postorder(self, node: Node):
+    # Recursivly print the BST Preorder root -> left -> right
+        if node:
+            self.print_bst_postorder(node.left)
+            self.print_bst_postorder(node.right)
+            print(node, end="->")
+
+        else:
             return
 
 
@@ -63,6 +82,13 @@ my_tree = BinaryTree()
 for value in tree_nodes:
     my_tree.add_node_bst(value)
 my_tree.print_bst_inorder(my_tree.root)
+print("End")
+
+my_tree.print_bst_preorder(my_tree.root)
+print("End")
+
+my_tree.print_bst_postorder(my_tree.root)
+print("End")
 
 
 x = 5
