@@ -12,3 +12,5 @@ if matches:
 
 
 s = "aaab"
+
+print("aaa" in "aaabcd")

@@ -1,3 +1,4 @@
+from collections import deque
 class Node():
 
     def __init__(self, value: int):
@@ -72,9 +73,26 @@ class BinaryTree():
             return
 
 
+    def leveOrder(self, root):
+        if not root:
+            return []
+        result = []
+        queue = deque([root])
 
+        while queue:
+            level_size = len(queue)
+            current_level = []
 
+            for _ in range(level_size):
+                node = queue.popleft()
+                current_level.append(node.value)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
 
+            result.append(current_level)
+        return result
 
 
 tree_nodes = [50,30,70,20,40,60,80]
@@ -90,6 +108,7 @@ print("End")
 my_tree.print_bst_postorder(my_tree.root)
 print("End")
 
+print(my_tree.leveOrder(my_tree.root))
 
 x = 5
 print([x for x in range(3)], end=',')
